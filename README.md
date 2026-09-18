@@ -25,6 +25,7 @@ git clone https://github.com/tianqiyun3090-bot/kaipai-web-precise-edit.git \
 
 ## 默认行为
 
+- 全流程使用 Ego Lite 浏览器完成网页操作。
 - 仅在用户明确授权后上传指定本地视频。
 - 使用开拍 Web 完成全部上传、编辑、处理和下载操作。
 - 删除全部识别出的“无声片段”；保留完整、可理解的短句。
