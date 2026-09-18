@@ -7,6 +7,10 @@ description: Create a Kaipai Web "网感剪辑" video with selected caption styl
 
 Use **Ego Browser** for every website navigation, upload, setting change, task submission, and download in this workflow. It is for single-speaker Chinese talking-head footage; for other material, stop after analysis and ask the user whether to force this treatment or choose another workflow.
 
+## Portability
+
+This is a reusable workflow, not a shared browser session. Each user must run it in their own Codex task, use their own Kaipai account, and complete any required login themselves. Never assume a prior task's Ego Browser task space, Kaipai login, browser tab, uploaded asset, local Desktop path, or download permission exists. When a user resumes a workflow in a later task, reopen that user's Kaipai project through the visible task list and continue from its **编辑** entry.
+
 ## Upload and analysis
 
 - Open `https://www.kaipai.com/ai-edit` and upload the user-provided local video through its file input only after the user has authorized uploading that specific file to Kaipai.
@@ -36,5 +40,5 @@ Do this before choosing a visual template or processing the video.
 - Clicking **开始处理** can consume Kaipai entitlements. For a single video, proceed once the user has explicitly asked to generate it; for a batch, obtain one summary confirmation before the first submission.
 - Wait through the server-side packaging states rather than returning early. If a stage has no progress for 10 minutes, do not re-upload, cancel, or retry; keep the task open, report the condition, and continue waiting unless the user changes direction.
 - Click **导出**, keep the requested or default 1080P MP4 option, then click **导出视频**.
-- Wait for the final render dialog to say **生成完成** before selecting **下载视频**. Save the received browser download to the Desktop as `原文件名-网感精剪-YYYYMMDD-HHMM.mp4`, without overwriting an existing file, and verify that it exists before reporting local delivery.
+- Wait for the final render dialog to say **生成完成** before selecting **下载视频**. Save the received browser download to the current user's Desktop as `原文件名-网感精剪-YYYYMMDD-HHMM.mp4`, without overwriting an existing file, and verify that it exists before reporting local delivery.
 - If Kaipai marks a task 已导出 but no browser download event or local file appears, report the web export as complete but do not claim a local file was delivered.
